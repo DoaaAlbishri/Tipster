@@ -47,13 +47,31 @@ class ViewController: UIViewController {
     
     
     @IBAction func tipSlider(_ sender: UISlider) {
+        tip1.text = "\(Int(sender.value + 10))%"
+        tip2.text = "\(Int(sender.value + 15))%"
+        tip3.text = "\(Int(sender.value + 20))%"
+        
+        tip4.text = "\(Float(sender.value + 5.00).rounded())"
+        tip5.text = "\(Float(sender.value + 6.00).rounded())"
+        tip6.text = "\(Float(sender.value + 3.00).rounded())"
+        
     }
+    
+    
+
+    @IBOutlet weak var group1: UILabel!
+    @IBOutlet weak var group2: UILabel!
+    @IBOutlet weak var group3: UILabel!
+    
     
     @IBAction func groupSlider(_ sender: UISlider) {
-        groupLabel.text = "Group Size: \(sender.value)"
+        groupLabel.text = "Group Size: \(Int(sender.value))"
+        
+        group1.text = "\(Float(sender.value + 13.00).rounded())"
+        group2.text = "\(Float(sender.value + 20.00).rounded())"
+        group3.text = "\(Float(sender.value + 12.71).rounded())"
     }
     
-    
-    
+
 }
 
